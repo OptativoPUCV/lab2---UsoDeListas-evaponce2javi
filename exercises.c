@@ -43,6 +43,9 @@ Al finalizar retorna la lista creada.
 
 List* crea_lista() {
    List* L = create_list();
+   int i = 0;
+
+   
    return L;
 }
 

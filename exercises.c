@@ -104,7 +104,7 @@ paraéntesis balanceados. Retorna 1 si están balanceados,
 int parentesisBalanceados(char *cadena) {
   Stack *pila = create_stack();
   char *caracter = first((char *)*cadena);
-  printf(":o\n");
+  printf("%s", caracter);
 
   /*stack *pila = create_stack();
   char *elemento = (char *)first(*cadena);

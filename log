@@ -2430,3 +2430,9 @@ arraylist.h:10:19: note: expected ‘List *’ but argument is of type ‘char *
 cc1: all warnings being treated as errors
 Compilation failed
 45ff1b4
+Thu 21 Mar 2024 01:09:53 AM UTC: 
+ exercises.c | 23 ++++++++++++++++++-----
+ 1 file changed, 18 insertions(+), 5 deletions(-)
+ tests:  3|3
+total_score: 20/70
+ba63bff

@@ -110,15 +110,15 @@ int parentesisBalanceados(char *cadena) {
     else {
       char *sig = top(pila);
       if ((*caracter) == ')' && (*sig) != '(')
-        return 0;
+        return 1;
       else if ((*caracter) == ']' && (*sig) != '[')
-        return 0;
+        return 1;
       else if ((*caracter) == '}' && (*sig) != '{')
-        return 0;
+        return 1;
     }
     caracter = next((List *)cadena);
   }
-  return 1;
+  return 0;
 }
 
 /*stack *pila = create_stack();

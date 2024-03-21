@@ -2409,3 +2409,24 @@ exercises.c:105:10: error: unused variable ‘pila’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 5c39191
+Thu 21 Mar 2024 01:02:50 AM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:106:26: error: cast to pointer from integer of different size [-Werror=int-to-pointer-cast]
+  106 |   char *caracter = first((char *)*cadena);
+      |                          ^
+exercises.c:106:26: error: passing argument 1 of ‘first’ from incompatible pointer type [-Werror=incompatible-pointer-types]
+  106 |   char *caracter = first((char *)*cadena);
+      |                          ^~~~~~~~~~~~~~~
+      |                          |
+      |                          char *
+In file included from exercises.c:1,
+                 from test.c:5:
+arraylist.h:10:19: note: expected ‘List *’ but argument is of type ‘char *’
+   10 | void* first(List *L);
+      |             ~~~~~~^
+cc1: all warnings being treated as errors
+Compilation failed
+45ff1b4

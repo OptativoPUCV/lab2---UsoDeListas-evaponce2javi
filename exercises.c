@@ -80,8 +80,9 @@ void eliminaElementos(List *L, int elem) {
   while (first(L) != NULL) {
     if (*(int *)first(L) == elem) {
       popCurrent(L);
+    } else {
+      next(L);
     }
-    break;
   }
 }
 

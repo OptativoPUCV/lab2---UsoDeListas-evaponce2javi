@@ -114,7 +114,9 @@ int parentesisBalanceados(char *cadena) {
   // int largo = get_size((List *)cadena);
   int largo = strlen(cadena);
   // char *caracter = (char *)first((List *)cadena);
-
+  if (largo % 2 != 0) {
+    return 0;
+  }
   for (int i = 0; i < largo; i++) {
 
     if (cadena[i] == '(' || cadena[i] == '[' || cadena[i] == '{')

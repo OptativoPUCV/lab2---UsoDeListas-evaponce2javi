@@ -75,7 +75,7 @@ de la lista que sean iguales a elem.
 Asume que popCurrent luego de eliminar un elemento se
 posiciona en el elemento anterior.
 */
-
+/*
 void eliminaElementos(List *L, int elem) {
   void *aux = first(L);
   while (aux != NULL) {
@@ -83,7 +83,7 @@ void eliminaElementos(List *L, int elem) {
       popCurrent(L);
     }
   }
-}
+}*/
 
 /*
 Ejercicio 4.
@@ -101,4 +101,25 @@ paraéntesis balanceados. Retorna 1 si están balanceados,
 0 en caso contrario.
 */
 
-int parentesisBalanceados(char *cadena) { return 0; }
+int parentesisBalanceados(char *cadena) {
+  stackPila *pila = create_stack();
+  char *elemento = (char *)first(cadena);
+  while (elemento != NULL) {
+    if (elemento == '(' || elemento == '[' || elemento == '{')
+      push(pila, elemento);
+    else {
+      switch (elemento) {
+      case ')':
+        if (top(pila) != '(')
+          return 0;
+      case ']':
+        if (top(pila) != '[')
+          return 0;
+      case '}':
+        if (top(pila) != '{')
+          return 0;
+        default continue;
+      }
+    }
+    return 1;
+  }

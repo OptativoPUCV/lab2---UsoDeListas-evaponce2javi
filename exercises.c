@@ -57,7 +57,16 @@ Ejercicio 2.
 Crea una función que reciba una lista de enteros (int*) y
 retorne la suma de sus elementos.
 */
-int sumaLista(List *L) { return 0; }
+int sumaLista(List *L) {
+  int suma = 0;
+  int aux = first(L);
+  while (L != NULL) {
+    suma += aux;
+    aux = next(L);
+  }
+
+  return 0;
+}
 
 /*
 Ejercicio 3.

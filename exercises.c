@@ -112,7 +112,7 @@ int parentesisBalanceados(char *cadena) {
   Stack *pila = create_stack();
   int largo = get_size((List *)cadena);
 
-  char *caracter = (char *)first((List *)cadena);
+  // char *caracter = (char *)first((List *)cadena);
 
   for (int i = 0; i < largo; i++) {
     if (cadena[i] == '(' || cadena[i] == '[' || cadena[i] == '{')

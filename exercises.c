@@ -62,7 +62,8 @@ int sumaLista(List *L) {
   int aux = *(int *)first(L);
   while (aux != NULL) {
     suma += aux;
-    aux = next(L);
+    popFront(L);
+    aux = first(L);
   }
 
   return suma;

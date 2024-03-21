@@ -102,7 +102,7 @@ paraéntesis balanceados. Retorna 1 si están balanceados,
 */
 
 int parentesisBalanceados(char *cadena) {
-  Stack *pila = create_stack();
+  // Stack *pila = create_stack();
   char *caracter = (char *)first((List *)cadena);
   int der = 0;
   int izq = 0;

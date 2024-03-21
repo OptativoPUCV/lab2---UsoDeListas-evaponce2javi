@@ -77,59 +77,51 @@ posiciona en el elemento anterior.
 */
 
 void eliminaElementos(List *L, int elem) {
-  // void *aux = first(L);
-  //  while (aux != NULL) {
-  //  if (*(int *)first(L) == elem) {
-  //  popCurrent(L);
-  // }
-  printf("hola\n\n");
-}
-
-/*
-Ejercicio 4.
-La función copia los punteros de la pila P1 en la pila P2.
-El orden de ambas pilas se debe mantener.
-Puedes usar una pila auxiliar.
-*/
-
-void copia_pila(Stack *P1, Stack *P2) {
-  int *el = first(P1);
-
-  while (el != NULL) {
-    pushBack(P2, el);
-    el = next(P1);
+  void *aux = first(L);
+  while (aux != NULL) {
+    if (*(int *)first(L) == elem) {
+      popCurrent(L);
+    } else
+      next(L);
   }
-}
 
-/*
-Ejercicio 5.
-La función verifica si la cadena de entrada tiene sus
-paraéntesis balanceados. Retorna 1 si están balanceados,
-0 en caso contrario.
-*/
+  /*
+  Ejercicio 4.
+  La función copia los punteros de la pila P1 en la pila P2.
+  El orden de ambas pilas se debe mantener.
+  Puedes usar una pila auxiliar.
+  */
 
-int parentesisBalanceados(char *cadena) {
-  // Stack *pila = create_stack();
-  char *caracter = (char *)first((List *)cadena);
-  int der = 0;
-  int izq = 0;
+  void copia_pila(Stack * P1, Stack * P2) {
+    int *el = first(P1);
 
-  while (caracter != NULL) {
-    if ((*caracter) == '(')
-      izq++;
-    // pushFront(pila, caracter);
-    else {
-      der++;
-      // char *ant = top(pila);
-      /// if ((*caracter) == ')' && (*ant) == '(')
-      // continue;
-      // else
-      // return 0;
+    while (el != NULL) {
+      pushBack(P2, el);
+      el = next(P1);
     }
-    caracter = next((List *)cadena);
   }
-  if (der == izq)
-    return 1;
-  else
-    return 0;
-}
+
+  /*
+  Ejercicio 5.
+  La función verifica si la cadena de entrada tiene sus
+  paraéntesis balanceados. Retorna 1 si están balanceados,
+  0 en caso contrario.
+  */
+
+  int parentesisBalanceados(char *cadena) {
+    Stack *pila = create_stack();
+    char *caracter = (char *)first((List *)cadena);
+
+    while (caracter != NULL) {
+      if ((*caracter) == '(')
+        pushFront(pila, caracter);
+      else {
+        char *ant = top(pila);
+        if ((*caracter) == ')' && (*ant) == '(')
+          continue;
+        else
+          return 0;
+      }
+      caracter = next((List *)cadena);
+    }
+  }

@@ -146,3 +146,23 @@ exercises.c:80:3: error: ‘aux’ undeclared (first use in this function)
 exercises.c:80:3: note: each undeclared identifier is reported only once for each function it appears in
 Compilation failed
 3931993
+Thu 21 Mar 2024 12:22:46 AM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘eliminaElementos’:
+exercises.c:80:8: error: variable or field ‘aux’ declared void
+   80 |   void aux = first(L);
+      |        ^~~
+exercises.c:80:14: error: initialization of ‘int’ from ‘void *’ makes integer from pointer without a cast [-Werror=int-conversion]
+   80 |   void aux = first(L);
+      |              ^~~~~
+exercises.c:81:14: error: comparison between pointer and integer [-Werror]
+   81 |   while (aux != NULL) {
+      |              ^~
+exercises.c:84:11: error: assignment to ‘int’ from ‘void *’ makes integer from pointer without a cast [-Werror=int-conversion]
+   84 |       aux = next(L);
+      |           ^
+cc1: all warnings being treated as errors
+Compilation failed
+3af0b75

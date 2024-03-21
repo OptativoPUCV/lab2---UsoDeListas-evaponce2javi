@@ -55,3 +55,17 @@ exercises.c:65:9: error: assignment to ‘int’ from ‘void *’ makes integer
 cc1: all warnings being treated as errors
 Compilation failed
 5763512
+Thu 21 Mar 2024 12:05:02 AM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘sumaLista’:
+exercises.c:63:14: error: comparison between pointer and integer [-Werror]
+   63 |   while (aux != NULL) {
+      |              ^~
+exercises.c:65:9: error: assignment to ‘int’ from ‘void *’ makes integer from pointer without a cast [-Werror=int-conversion]
+   65 |     aux = next(L);
+      |         ^
+cc1: all warnings being treated as errors
+Compilation failed
+078d61e

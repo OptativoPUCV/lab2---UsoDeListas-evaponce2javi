@@ -135,3 +135,14 @@ exercises.c:81:20: error: expected statement before ‘)’ token
 cc1: all warnings being treated as errors
 Compilation failed
 edb9505
+Thu 21 Mar 2024 12:22:30 AM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘eliminaElementos’:
+exercises.c:80:3: error: ‘aux’ undeclared (first use in this function)
+   80 |   aux = first(L);
+      |   ^~~
+exercises.c:80:3: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+3931993

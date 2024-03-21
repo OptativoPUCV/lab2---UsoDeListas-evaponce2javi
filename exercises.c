@@ -83,44 +83,45 @@ void eliminaElementos(List *L, int elem) {
     } else
       popCurrent(L);
   }
+}
 
-  /*
-  Ejercicio 4.
-  La función copia los punteros de la pila P1 en la pila P2.
-  El orden de ambas pilas se debe mantener.
-  Puedes usar una pila auxiliar.
-  */
+/*
+Ejercicio 4.
+La función copia los punteros de la pila P1 en la pila P2.
+El orden de ambas pilas se debe mantener.
+Puedes usar una pila auxiliar.
+*/
 
-  void copia_pila(Stack * P1, Stack * P2) {
-    int *el = first(P1);
+void copia_pila(Stack *P1, Stack *P2) {
+  int *el = first(P1);
 
-    while (el != NULL) {
-      pushBack(P2, el);
-      el = next(P1);
-    }
+  while (el != NULL) {
+    pushBack(P2, el);
+    el = next(P1);
   }
+}
 
-  /*
-  Ejercicio 5.
-  La función verifica si la cadena de entrada tiene sus
-  paraéntesis balanceados. Retorna 1 si están balanceados,
-  0 en caso contrario.
-  */
+/*
+Ejercicio 5.
+La función verifica si la cadena de entrada tiene sus
+paraéntesis balanceados. Retorna 1 si están balanceados,
+0 en caso contrario.
+*/
 
-  int parentesisBalanceados(char *cadena) {
-    Stack *pila = create_stack();
-    char *caracter = (char *)first((List *)cadena);
+int parentesisBalanceados(char *cadena) {
+  Stack *pila = create_stack();
+  char *caracter = (char *)first((List *)cadena);
 
-    while (caracter != NULL) {
-      if ((*caracter) == '(')
-        pushFront(pila, caracter);
-      else {
-        char *ant = top(pila);
-        if ((*caracter) == ')' && (*ant) == '(')
-          continue;
-        else
-          return 0;
-      }
-      caracter = next((List *)cadena);
+  while (caracter != NULL) {
+    if ((*caracter) == '(')
+      pushFront(pila, caracter);
+    else {
+      char *ant = top(pila);
+      if ((*caracter) == ')' && (*ant) == '(')
+        continue;
+      else
+        return 0;
     }
+    caracter = next((List *)cadena);
   }
+}

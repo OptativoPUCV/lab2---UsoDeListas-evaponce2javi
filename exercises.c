@@ -60,7 +60,7 @@ retorne la suma de sus elementos.
 int sumaLista(List *L) {
   int suma = 0;
   while (first(L) != NULL) {
-    suma += *first(L);
+    suma += *(int *)first(L);
     popFront(L);
   }
 
@@ -76,7 +76,14 @@ Asume que popCurrent luego de eliminar un elemento se
 posiciona en el elemento anterior.
 */
 
-void eliminaElementos(List *L, int elem) {}
+void eliminaElementos(List *L, int elem) {
+  while (first(L) != NULL) {
+    if (*(int *)first(L) == elem) {
+      popCurrent(L);
+    }
+    break;
+  }
+}
 
 /*
 Ejercicio 4.

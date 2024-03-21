@@ -83,3 +83,15 @@ exercises.c:66:9: error: assignment to ‘int’ from ‘void *’ makes integer
 cc1: all warnings being treated as errors
 Compilation failed
 6da63eb
+Thu 21 Mar 2024 12:09:31 AM UTC: 
+ exercises.c | 6 ++----
+ 1 file changed, 2 insertions(+), 4 deletions(-)
+In file included from test.c:5:
+exercises.c: In function ‘sumaLista’:
+exercises.c:63:13: error: dereferencing ‘void *’ pointer [-Werror]
+   63 |     suma += *first(L);
+      |             ^~~~~~~~~
+exercises.c:63:13: error: void value not ignored as it ought to be
+cc1: all warnings being treated as errors
+Compilation failed
+94a2240

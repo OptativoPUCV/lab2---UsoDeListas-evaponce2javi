@@ -191,3 +191,22 @@ arraylist.h:32:7: note: declared here
       |       ^~~~~~~~~~
 Compilation failed
 040831c
+Thu 21 Mar 2024 12:28:25 AM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘eliminaElementos’:
+exercises.c:82:13: error: comparison between pointer and integer [-Werror]
+   82 |     if (aux == elem) {
+      |             ^~
+exercises.c:83:7: error: too many arguments to function ‘popCurrent’
+   83 |       popCurrent(L, elem);
+      |       ^~~~~~~~~~
+In file included from exercises.c:1,
+                 from test.c:5:
+arraylist.h:32:7: note: declared here
+   32 | void *popCurrent(List *L);
+      |       ^~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+be31914

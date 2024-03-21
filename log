@@ -229,3 +229,14 @@ arraylist.h:32:7: note: declared here
 cc1: all warnings being treated as errors
 Compilation failed
 3f2a7ab
+Thu 21 Mar 2024 12:29:01 AM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘eliminaElementos’:
+exercises.c:82:13: error: comparison between pointer and integer [-Werror]
+   82 |     if (aux == elem) {
+      |             ^~
+cc1: all warnings being treated as errors
+Compilation failed
+00d20d4

@@ -80,7 +80,7 @@ void eliminaElementos(List *L, int elem) {
   void *aux = first(L);
   while (aux != NULL) {
     if (aux == elem) {
-      popCurrent(L, aux);
+      popCurrent(L);
     }
   }
 }

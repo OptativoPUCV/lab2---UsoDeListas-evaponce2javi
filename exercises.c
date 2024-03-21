@@ -124,4 +124,5 @@ int parentesisBalanceados(char *cadena) {
     }
     caracter = next((List *)cadena);
   }
+  return 1;
 }

@@ -4901,3 +4901,14 @@ Thu 21 Mar 2024 02:25:04 AM UTC:
  tests:  5|1
 total_score: 50/70
 8d74003
+Thu 21 Mar 2024 02:37:03 AM UTC: 
+ exercises.c | 24 +++++++++++++++---------
+ 1 file changed, 15 insertions(+), 9 deletions(-)
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:115:9: error: unused variable ‘caracter’ [-Werror=unused-variable]
+  115 |   char *caracter = (char *)first((List *)cadena);
+      |         ^~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+cd0bec3
